@@ -148,6 +148,9 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Assigm wezterm terminals to workspace 1
 assign [class="org.wezfurlong.wezterm"] 1
 
+# Assign firefox to workspace 2
+assign [class="firefox"] 2
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
