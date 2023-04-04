@@ -151,6 +151,16 @@ assign [class="org.wezfurlong.wezterm"] 1
 # Assign firefox to workspace 2
 assign [class="firefox"] 2
 
+# Assign monitors to variables
+set $firstmonitor DP-2
+set $secondmonitor HDMI-0
+
+# Assign workspaces to display on specific screens
+workspace 1 output $firstmonitor
+workspace 2 output $firstmonitor
+workspace 3 output $firstmonitor
+workspace 4 output $firstmonitor
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -191,7 +201,7 @@ bar {
         status_command i3status
 }
 
-#Remove title bar from border
+# Remove title bar from border
 default_border pixel
 
 exec_always --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-1 --off --output DP-0 --off --output DP-1 --off --output DP-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-3 --off
